@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    let count = 0;
+
+function increaseCount() {
+    count++;
+    document.getElementById("count").innerText = count;
+}
+
+function resetCount() {
+    count = 0;
+    document.getElementById("count").innerText = count;
+}
+
+</script>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.counter-container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+</style>
+<body>
+
+    <div class="counter-container">
+        <h1>Click Counter</h1>
+        <p>Clicks: <span id="count">0</span></p>
+        <button onclick="increaseCount()">Click Me</button>
+        <button onclick="resetCount()">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
